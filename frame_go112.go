@@ -218,7 +218,7 @@ func (f *Frame) SetData(idx int, lineSize int, data int) *Frame {
 	return f
 }
 
-func (f *Frame) FillData(idx int, size int, data []int) *Frame {
+func (f *Frame) FillData(idx int, size int, data []byte) *Frame {
 	C.gmf_fill_frame_data(f.avFrame, C.int(idx), C.int(size), (*C.uint8_t)(unsafe.Pointer(&data[0])))
 
 	return f
