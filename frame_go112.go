@@ -23,9 +23,9 @@ void gmf_fill_frame_data(AVFrame *frame, int idx, int size, uint8_t* data) {
         fprintf(stderr, "frame is NULL\n");
     }
 
-	for (int i = 0; i < size; i++) {
-		frame->data[idx][i] = data[i];
-	}
+    for (int i = 0; i < size; i++) {
+        frame->data[idx][i] = data[i];
+    }
 }
 
 int gmf_get_frame_line_size(AVFrame *frame, int idx) {
